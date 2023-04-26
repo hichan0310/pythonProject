@@ -10,9 +10,9 @@ plt.scatter(a, b)
 for i in range(1000):
     cost=0
     for j in range(100):
-        costt=b[j]-a[j]*p
+        costt=a[j]*p-b[j]
         cost+=costt
-        p -= -costt*a[j]
+        p -= costt*a[j]*lr
     print(cost/100)
 
 plt.plot([0, 1], [0, p])
